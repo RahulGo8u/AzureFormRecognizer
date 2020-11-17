@@ -1,0 +1,16 @@
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\FormRecognizer.exe.config
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\FormRecognizer.exe
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\FormRecognizer.pdb
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Microsoft.Azure.CognitiveServices.FormRecognizer.dll
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Newtonsoft.Json.dll
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Microsoft.Azure.CognitiveServices.FormRecognizer.xml
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\bin\Debug\Newtonsoft.Json.xml
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\obj\Debug\FormRecognizer.csprojAssemblyReference.cache
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\obj\Debug\FormRecognizer.csproj.CoreCompileInputs.cache
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\obj\Debug\FormRecognizer.csproj.CopyComplete
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\obj\Debug\FormRecognizer.exe
+E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\v0.8.0-project\obj\Debug\FormRecognizer.pdb
