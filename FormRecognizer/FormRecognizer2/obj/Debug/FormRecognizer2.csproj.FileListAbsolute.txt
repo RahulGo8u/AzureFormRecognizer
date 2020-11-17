@@ -8,3 +8,13 @@ E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecog
 E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\FormRecognizer2\bin\Debug\Newtonsoft.Json.dll
 E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\FormRecognizer2\bin\Debug\Newtonsoft.Json.xml
 E:\git\6_AzureFormRecognizer\cognitive-services-quickstart-code\dotnet\FormRecognizer\FormRecognizer2\obj\Debug\FormRecognizer2.csproj.CopyComplete
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\bin\Debug\FormRecognizer2.exe.config
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\bin\Debug\FormRecognizer2.exe
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\bin\Debug\FormRecognizer2.pdb
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\bin\Debug\Newtonsoft.Json.dll
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\bin\Debug\Newtonsoft.Json.xml
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\obj\Debug\FormRecognizer2.csprojAssemblyReference.cache
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\obj\Debug\FormRecognizer2.csproj.CoreCompileInputs.cache
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\obj\Debug\FormRecognizer2.csproj.CopyComplete
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\obj\Debug\FormRecognizer2.exe
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizer2\obj\Debug\FormRecognizer2.pdb

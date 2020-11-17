@@ -29,23 +29,28 @@ namespace FormRecognizer2
         public string source { get; set; }
     }
     public class PostChequeObject
-    {        
+    {
         public string source { get; set; }
     }
 
     public class Program
     {
+        static string apiKey = "cca73eb1d2064462ba62d32598fcd2c5";
+        static string imgUrl =@"https://signaturestorageacct.blob.core.windows.net/chequestorage/IMG_8097.JPG";
+        static string endpointURI = @"https://adcbformrecognizer.cognitiveservices.azure.com/formrecognizer/v2.0/custom/models";
+        static string sasURI = @"https://signaturestorageacct.blob.core.windows.net/chequestorage?sv=2019-12-12&ss=b&srt=sco&st=2020-11-17T04%3A31%3A06Z&se=2020-11-20T04%3A31%3A00Z&sp=rwftlcp&sig=sBSmbbd8wgyB%2ByS9IC8%2Fq3C%2F%2FzXMCkwUCsTWoxe6yxs%3D";
         static void Main(string[] args)
         {
             PerformFormRecognization();
             Console.ReadLine();
         }
-        public async static void PerformFormRecognization() {
+        public async static void PerformFormRecognization()
+        {
             var uri = await TrainModel();
             var customModel = await GetCustomModel(uri);
             //var uri = @"https://adcbformrecognizer.cognitiveservices.azure.com/formrecognizer/v2.0/custom/models/8ea466e9-48d2-48bf-a444-4101258a823d";
             var analyzeURI = await AnalyzeForm(uri);
-            var responseText = await AnalyzeFormResult(analyzeURI);            
+            var responseText = await AnalyzeFormResult(analyzeURI);
             Console.WriteLine("************");
             Console.WriteLine(responseText);
             Console.WriteLine("************");
@@ -57,20 +62,20 @@ namespace FormRecognizer2
             {
                 PostObject postObject = new PostObject
                 {
-                    source = "https://signaturestorageacct.blob.core.windows.net/chequestorage?sv=2019-12-12&ss=b&srt=sco&st=2020-11-16T18%3A52%3A04Z&se=2020-11-17T18%3A52%3A04Z&sp=rwl&sig=bZGWoGGMEu%2FsaZWLH90incofFRtZWgN5bEFKLn4DEPQ%3D",
+                    source = sasURI,
                     SourceFilter = new SourceFilter
                     {
                         includeSubFolders = false,
-                        prefix = "I"
+                        prefix = ""
                     },
-                    useLabelFile = true
+                    useLabelFile = false
                 };
 
                 var myContent = JsonConvert.SerializeObject(postObject);
-                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cca73eb1d2064462ba62d32598fcd2c5");
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var builder = new UriBuilder(new Uri("https://adcbformrecognizer.cognitiveservices.azure.com/formrecognizer/v2.0/custom/models"));
+                var builder = new UriBuilder(new Uri(endpointURI));
 
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, builder.Uri);
                 request.Content = new StringContent(myContent, Encoding.UTF8, "application/json");//CONTENT-TYPE header
@@ -81,7 +86,7 @@ namespace FormRecognizer2
                 {
                     var location = response.Headers.Location.ToString();
                     return location;
-                }                
+                }
             };
             return "";
         }
@@ -89,19 +94,17 @@ namespace FormRecognizer2
         public static async Task<string> GetCustomModel(string uri)
         {
             using (var client = new HttpClient { Timeout = TimeSpan.FromSeconds(30) })
-            {                                
-                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cca73eb1d2064462ba62d32598fcd2c5");
+            {
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 var builder = new UriBuilder(new Uri(uri));
-
-                //HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, builder.Uri);
 
                 HttpResponseMessage response = await client.GetAsync(builder.Uri);
                 response.EnsureSuccessStatusCode();
                 var responseBodyAsText = await response.Content.ReadAsStringAsync();
 
-                Thread.Sleep(2000);                
+                Thread.Sleep(2000);
             };
             return "";
         }
@@ -112,14 +115,14 @@ namespace FormRecognizer2
             {
                 PostChequeObject postObject = new PostChequeObject
                 {
-                    source = @"https://signaturestorageacct.blob.core.windows.net/chequestorage/IMG_8097 - Copy (3).JPG",
+                    source = imgUrl,
                 };
 
                 var myContent = JsonConvert.SerializeObject(postObject);
-                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cca73eb1d2064462ba62d32598fcd2c5");
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var builder = new UriBuilder(new Uri(uri+ "/analyze"));
+                var builder = new UriBuilder(new Uri(uri + "/analyze"));
 
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, builder.Uri);
                 request.Content = new StringContent(myContent, Encoding.UTF8, "application/json");//CONTENT-TYPE header
@@ -131,10 +134,10 @@ namespace FormRecognizer2
                     foreach (var item in response.Headers)
                     {
                         if (item.Key.Equals("Operation-Location"))
-                        {                            
+                        {
                             return item.Value.FirstOrDefault().ToString();
                         }
-                    }                    
+                    }
                 }
             };
             return "";
@@ -143,12 +146,10 @@ namespace FormRecognizer2
         {
             using (var client = new HttpClient { Timeout = TimeSpan.FromSeconds(30) })
             {
-                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cca73eb1d2064462ba62d32598fcd2c5");
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 var builder = new UriBuilder(new Uri(uri));
-
-                //HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, builder.Uri);
 
                 HttpResponseMessage response = await client.GetAsync(builder.Uri);
                 Thread.Sleep(2000);
@@ -156,7 +157,6 @@ namespace FormRecognizer2
                 var responseBodyAsText = await response.Content.ReadAsStringAsync();
                 return responseBodyAsText;
             };
-            return "";
         }
 
     }
