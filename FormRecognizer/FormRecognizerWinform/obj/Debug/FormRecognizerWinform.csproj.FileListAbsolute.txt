@@ -1,0 +1,15 @@
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\bin\Debug\FormRecognizerWinform.exe.config
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\bin\Debug\FormRecognizerWinform.exe
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\bin\Debug\FormRecognizerWinform.pdb
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.csprojAssemblyReference.cache
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.frmImageParser.resources
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.Properties.Resources.resources
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.csproj.GenerateResource.cache
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.csproj.CoreCompileInputs.cache
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.exe
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.pdb
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\bin\Debug\Common.dll
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\bin\Debug\Newtonsoft.Json.dll
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\bin\Debug\Common.pdb
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\bin\Debug\Newtonsoft.Json.xml
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\FormRecognizerWinform\obj\Debug\FormRecognizerWinform.csproj.CopyComplete

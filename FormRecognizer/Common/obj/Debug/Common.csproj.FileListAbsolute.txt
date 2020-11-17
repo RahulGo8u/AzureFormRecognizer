@@ -1,0 +1,9 @@
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\bin\Debug\Common.dll
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\bin\Debug\Common.pdb
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\bin\Debug\Newtonsoft.Json.dll
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\bin\Debug\Newtonsoft.Json.xml
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\obj\Debug\Common.csprojAssemblyReference.cache
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\obj\Debug\Common.csproj.CopyComplete
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\obj\Debug\Common.dll
+E:\git\6_AzureFormRecognizer\AzureFormRecognizer\FormRecognizer\Common\obj\Debug\Common.pdb
