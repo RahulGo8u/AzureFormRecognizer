@@ -37,18 +37,26 @@ namespace FormRecognizer2
     {
         static string apiKey = "cca73eb1d2064462ba62d32598fcd2c5";
         static string imgUrl =@"https://signaturestorageacct.blob.core.windows.net/chequestorage/IMG_8097.JPG";
-        static string endpointURI = @"https://adcbformrecognizer.cognitiveservices.azure.com/formrecognizer/v2.0/custom/models";
-        static string sasURI = @"https://signaturestorageacct.blob.core.windows.net/chequestorage?sv=2019-12-12&ss=b&srt=sco&st=2020-11-17T04%3A31%3A06Z&se=2020-11-20T04%3A31%3A00Z&sp=rwftlcp&sig=sBSmbbd8wgyB%2ByS9IC8%2Fq3C%2F%2FzXMCkwUCsTWoxe6yxs%3D";
+        static string endpointURI = @"https://adcbformrecognizer.cognitiveservices.azure.com/formrecognizer/v2.1-preview.1/custom/models";
+        static string sasURI = @"https://signaturestorageacct.blob.core.windows.net/chequestorage?sv=2019-12-12&ss=b&srt=sco&st=2020-11-16T18%3A52%3A04Z&se=2020-11-17T18%3A52%3A04Z&sp=rwl&sig=bZGWoGGMEu%2FsaZWLH90incofFRtZWgN5bEFKLn4DEPQ%3D";
+        static string uri;
+        static bool trainModel = false;
         static void Main(string[] args)
         {
             PerformFormRecognization();
             Console.ReadLine();
         }
         public async static void PerformFormRecognization()
-        {
-            var uri = await TrainModel();
-            var customModel = await GetCustomModel(uri);
-            //var uri = @"https://adcbformrecognizer.cognitiveservices.azure.com/formrecognizer/v2.0/custom/models/8ea466e9-48d2-48bf-a444-4101258a823d";
+        {            
+            if (trainModel)
+            {
+                uri = await TrainModel();
+                var customModel = await GetCustomModel(uri);
+            }
+            else
+            {
+                uri = @"https://adcbformrecognizer.cognitiveservices.azure.com/formrecognizer/v2.1-preview.1/custom/models/cbc45a6a-6a76-4b22-8abe-40678bc8fc02";
+            }            
             var analyzeURI = await AnalyzeForm(uri);
             var responseText = await AnalyzeFormResult(analyzeURI);
             Console.WriteLine("************");
@@ -68,7 +76,7 @@ namespace FormRecognizer2
                         includeSubFolders = false,
                         prefix = ""
                     },
-                    useLabelFile = false
+                    useLabelFile = true
                 };
 
                 var myContent = JsonConvert.SerializeObject(postObject);
@@ -158,6 +166,5 @@ namespace FormRecognizer2
                 return responseBodyAsText;
             };
         }
-
     }
 }
